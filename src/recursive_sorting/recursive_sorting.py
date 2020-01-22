@@ -21,6 +21,9 @@ def merge(arrA, arrB):
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
+array = [1, 5, 2, 6, 32, 4, 65, 7]
+
+
 def merge_sort(arr):
     # TO-DO
     if len(arr) > 1:
@@ -31,7 +34,9 @@ def merge_sort(arr):
         merge_sort(LHS)
         merge_sort(RHS)
 
-        i, j, k = 0
+        i = 0
+        j = 0
+        k = 0
 
         while i < len(LHS) and j < len(RHS):
             if LHS[i] < RHS[j]:
@@ -54,7 +59,11 @@ def merge_sort(arr):
     return arr
 
 
+print(merge_sort(array))
+
 # STRETCH: implement an in-place merge sort algorithm
+
+
 def merge_in_place(arr, start, mid, end):
     # TO-DO
 
